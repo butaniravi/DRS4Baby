@@ -1,0 +1,66 @@
+<html>
+<body>
+<div id="first" style="clear: both; text-align: center;">
+<h1>
+Success...!!!</h1>
+<a href="https://1.bp.blogspot.com/-vMYPmjSkWOc/WD0BmyKwbyI/AAAAAAAAAuU/KLxqOuja3F8yT-OD-WH2DkJv3k2YPBNxwCLcB/s1600/Done.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="255" src="https://1.bp.blogspot.com/-vMYPmjSkWOc/WD0BmyKwbyI/AAAAAAAAAuU/KLxqOuja3F8yT-OD-WH2DkJv3k2YPBNxwCLcB/s400/Done.png" width="400" /></a><br />
+<b> Your 20 character Authorisation Code is... </b>
+<h2 id="auth">
+</h2>
+Please press config button on your device and enter above Authorisation Code to Validate your Device with Amazon DRS
+<br />
+
+</div>
+<div id="myDiv" style="clear: both; text-align: center;">
+<h1>
+Register for Amazon DRS..</h1>
+<a href="https://2.bp.blogspot.com/-p_lSk_du2Es/WDz80ruuZxI/AAAAAAAAAt8/uZT0MH2fMiEPYHxUk22r7ikZ4xKICADKgCLcB/s1600/teaser-page-1._TTH_.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="330" src="https://2.bp.blogspot.com/-p_lSk_du2Es/WDz80ruuZxI/AAAAAAAAAt8/uZT0MH2fMiEPYHxUk22r7ikZ4xKICADKgCLcB/s400/teaser-page-1._TTH_.png" width="500" /></a>
+<form action="form_action.asp" id="frm1">
+  <b>PRODUCT MODEL ID </b> <br /> <input maxlength="36" name="pname" size="38" style="text-align: center;" type="text" value="041557cb-efe4-4206-bf43-93dfb6077b01" /><br /><br />
+  <b>SERIAL NO </b><br /> <input maxlength="12" name="sname" size="14" style="text-align: center;" type="text" value="abcDe1234567" /><br /><br />
+  <input onclick="lwaFunction()" type="button" value="Login with Amazon" />
+</form>
+</div>
+<br />
+<br />
+
+<script>
+function defFunction() {
+    var str = String(window.location);
+    var pos = str.indexOf("code=");
+    if(pos != -1)
+    {
+       myDiv.style.display = "none";
+       var str = String(window.location);
+       var res = str.substring(pos+5,pos+25);
+       document.getElementById("auth").innerHTML = res;
+    }
+}
+
+function lwaFunction() {
+    var str = String(window.location);
+    var pos = str.indexOf("code=");
+    if(pos == -1)
+    {
+        var x1 = document.getElementById("frm1");
+        var productid = String(x1.elements[0].value);
+        var serialno = String(x1.elements[1].value);
+        window.open("https://www.amazon.com/ap/oa?client_id=amzn1.application-oa2-client.ec9be5378ace4941d323b06e68e28e33&scope=dash%3Areplenish&scope_data=%7B%22dash%3Areplenish%22%3A%7B%22device_model%22%3A%22"+productid+"%22%2C%22serial%22%3A%22"+serialno+"%22%2C%22is_test_device%22%3Atrue%7D%7D&response_type=code&redirect_uri=https%3A%2F%2Fdrs4baby.blogspot.in%2F2016%2F11%2Fregistration.html");
+    }
+}
+
+function fstFunction() {
+    var str = String(window.location);
+    var pos = str.indexOf("code=");
+    if(pos == -1)
+    {
+        first.style.display = "none";
+    }
+}
+
+defFunction();
+fstFunction() 
+</script>
+</body>
+
+</html>
