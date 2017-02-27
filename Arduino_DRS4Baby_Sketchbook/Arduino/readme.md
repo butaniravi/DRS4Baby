@@ -1,6 +1,6 @@
 All set for compile and upload DRS4Baby code
 
-open sketch and modifiy following line with Amazon DRS parameters relevant to your device. You are ready to upload it on your device..
+open sketch A_DRS_DEMO_I2C_LCD.ino and modifiy following line with Amazon DRS parameters relevant to your device. You are ready to upload it on your device..
 
 
 //AMAZON DRS parameters
